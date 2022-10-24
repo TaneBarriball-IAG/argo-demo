@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: team2
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  description: Team2 Applications
+  sourceRepos:
+  - 'argo-demo'
+  destinations:
+  - namespace: 'team2'
+    server: '*'
+  clusterResourceWhitelist:
+  - group: ''
+    kind: Namespace
+  namespaceResourceBlacklist:
+  - group: ''
+    kind: ResourceQuota
+  - group: ''
+    kind: LimitRange
+  - group: ''
+    kind: NetworkPolicy

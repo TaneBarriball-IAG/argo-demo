@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-  - team1
-  - team2
-  - team3
+  - namespace-team2.yaml
+  - project-team2.yaml
+  - applications/podinfo
