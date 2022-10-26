@@ -4,7 +4,7 @@ metadata:
   name: team1-setup
 spec:
   destination:
-    namespace: argocd
+    namespace: team1
     name: in-cluster
   project: argo-projects
   source:
