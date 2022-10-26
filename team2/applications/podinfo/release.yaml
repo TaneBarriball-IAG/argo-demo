@@ -4,7 +4,7 @@ metadata:
   name: team2-podinfo-helm
 spec:
   destination:
-    name: staging
+    name: default
   source:
     repoURL: 'https://stefanprodan.github.io/podinfo'
     targetRevision: x.x.x
