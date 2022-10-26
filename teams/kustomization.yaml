@@ -3,5 +3,5 @@
 # namespace: argocd
 
 # resources:
-#   - team-deployments/team1.yaml
+  - team-deployments/team1.yaml
 #   - team-deployments/team2.yaml
