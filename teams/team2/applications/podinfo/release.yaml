@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team2-podinfo
+  name: podinfo
   namespace: team2
 spec:
   destination:
@@ -11,6 +11,8 @@ spec:
     repoURL: 'https://stefanprodan.github.io/podinfo'
     targetRevision: x.x.x
     chart: podinfo
+    helm:
+      releaseName: team2-podinfo
   project: team2
   syncPolicy:
     syncOptions:
