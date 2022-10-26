@@ -22,3 +22,5 @@ spec:
     kind: LimitRange
   - group: ''
     kind: NetworkPolicy
+  sourceRepos:
+  - '*'
