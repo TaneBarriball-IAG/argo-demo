@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team1-podinfo-helm
+  name: podinfo
 spec:
   destination:
     name: in-cluster
