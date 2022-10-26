@@ -1,16 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team1-setup
+  name: team1-podinfo-helm
 spec:
   destination:
-    namespace: argocd
     name: in-cluster
-  project: argo-projects
   source:
-    repoURL: https://github.com/TaneBarriball-IAG/argo-demo.git
-    path: teams/team1
-    targetRevision: main
+    repoURL: 'https://stefanprodan.github.io/podinfo'
+    targetRevision: x.x.x
+    chart: podinfo
+  project: team1
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
