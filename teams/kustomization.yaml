@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-  - team-deployments/*.yaml
+  - team-deployments/team1.yaml
