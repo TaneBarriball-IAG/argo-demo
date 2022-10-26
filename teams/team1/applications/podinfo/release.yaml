@@ -5,6 +5,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
+    namespace: team1
   source:
     repoURL: 'https://stefanprodan.github.io/podinfo'
     targetRevision: x.x.x
