@@ -36,7 +36,7 @@ spec:
     helm:
       values: |
         teamname: "team1"
-  project: team1
+  project: argo-projects
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
