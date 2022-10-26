@@ -17,3 +17,5 @@ spec:
     warn: true
   sourceRepos:
   - https://github.com/TaneBarriball-IAG/argo-demo.git
+  sourceNamespaces:
+  - "*"

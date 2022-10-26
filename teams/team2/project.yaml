@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: team2
-  namespace: team2
+  namespace: argocd
 spec:
   clusterResourceWhitelist:
   - group: '*'
@@ -16,4 +16,6 @@ spec:
   orphanedResources:
     warn: true
   sourceRepos:
+  - '*'
+  sourceNamespaces:
   - '*'
