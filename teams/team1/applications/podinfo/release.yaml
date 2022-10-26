@@ -2,10 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: podinfo
-  namespace: team1
 spec:
   destination:
     name: in-cluster
+    namespace: team1
   source:
     repoURL: 'https://stefanprodan.github.io/podinfo'
     targetRevision: x.x.x
