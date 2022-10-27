@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
   - team1.yaml
-  - team2.yaml
+  # - team2.yaml
   - team3.yaml

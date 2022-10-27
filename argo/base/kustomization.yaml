@@ -6,6 +6,7 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.5.0/manifests/install.yaml
 
 patchesStrategicMerge:
-- overlays/argocd-cm.yaml
+- overlays/argocd-cm-kustomize.yaml
+- overlays/argocd-cm-application.yaml
 - overlays/argocd-server-svc.yaml
 - overlays/argocd-secret.yaml

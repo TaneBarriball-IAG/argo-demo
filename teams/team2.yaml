@@ -1,20 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind: ApplicationSet
 metadata:
-  name: team2-setup
-  namespace: argocd
+  name: cluster-addons
 spec:
-  destination:
-    namespace: team2
-    name: in-cluster
-  project: argo-projects
-  source:
-    repoURL: https://github.com/TaneBarriball-IAG/argo-demo.git
-    path: teams/team2
-    targetRevision: main
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
-    automated:
-      prune: true
-      selfHeal: true
+  generators:
+  - git:
+      repoURL: https://github.com/TaneBarriball-IAG/argo-demo.git
+      revision: main
+      directories:
+      - path: teams/team2/applications/*
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: team2
+      source:
+        repoURL: https://github.com/TaneBarriball-IAG/argo-demo.git
+        targetRevision: main
+        path: '{{path}}'
+      destination:
+        name: in-cluster
+        namespace: 'team2-{{path.basename}}'
