@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: podinfo-1
+  name: team1-podinfo
 spec:
   destination:
     name: in-cluster
@@ -19,3 +19,4 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  
