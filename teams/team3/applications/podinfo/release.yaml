@@ -16,10 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-
-
-helmCharts:
-- name: podinfo
-  repo: https://stefanprodan.github.io/podinfo
-  version: x.x.x
-  releaseName: team3-podinfo
