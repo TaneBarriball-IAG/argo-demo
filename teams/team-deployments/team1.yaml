@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: team1-setup
-  namespace: team1
+  namespace: argocd
 spec:
   destination:
     namespace: team1
