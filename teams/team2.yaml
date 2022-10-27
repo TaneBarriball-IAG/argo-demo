@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: cluster-addons
+  name: team2
 spec:
   generators:
   - git:
@@ -13,7 +13,7 @@ spec:
     metadata:
       name: '{{path.basename}}'
     spec:
-      project: team2
+      project: argocd-projects
       source:
         repoURL: https://github.com/TaneBarriball-IAG/argo-demo.git
         targetRevision: main
