@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://stefanprodan.github.io/podinfo
     chart: podinfo
-    version: x.x.x
+    targetRevision: x.x.x
   syncPolicy:
     automated:
       prune: true
