@@ -13,7 +13,7 @@ spec:
     metadata:
       name: '{{path.basename}}'
     spec:
-      project: argocd-projects
+      project: argo-projects
       source:
         repoURL: https://github.com/TaneBarriball-IAG/argo-demo.git
         targetRevision: main
