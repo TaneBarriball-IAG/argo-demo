@@ -21,3 +21,7 @@ spec:
       destination:
         name: in-cluster
         namespace: 'team2-{{path.basename}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
