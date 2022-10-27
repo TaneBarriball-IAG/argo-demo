@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team1-podinfo
+  name: team2-podinfo
   namespace: argocd
 spec:
   destination:
-    namespace: team1
+    namespace: team2
     name: in-cluster
-  project: team1
+  project: team2
   source:
-    path: './teams/team1/applications/podinfo'
+    path: './teams/team2/applications/podinfo'
     repoURL: https://github.com/TaneBarriball-IAG/argo-demo.git
     targetRevision: main
   syncPolicy:
