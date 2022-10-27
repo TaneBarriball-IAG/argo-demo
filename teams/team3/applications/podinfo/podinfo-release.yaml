@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: team3-podinfo
+  namespace: argocd
+spec:
+  destination:
+    namespace: team3
+    name: in-cluster
+  project: team3
+  source:
+    repoURL: https://stefanprodan.github.io/podinfo
+    chart: podinfo
+    version: x.x.x
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+
+helmCharts:
+- name: podinfo
+  repo: https://stefanprodan.github.io/podinfo
+  version: x.x.x
+  releaseName: team3-podinfo

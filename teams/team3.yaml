@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: team3-setup-helm-only
+  namespace: argocd
+spec:
+  destination:
+    namespace: team3
+    name: in-cluster
+  project: argo-projects
+  source:
+    repoURL: https://github.com/TaneBarriball-IAG/argo-demo.git
+    path: teams/team3
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
